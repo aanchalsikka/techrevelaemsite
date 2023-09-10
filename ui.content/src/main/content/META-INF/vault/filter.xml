@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/techrevelaemsite" mode="merge"/>
+    <filter root="/content/techrevelaemsite" mode="merge"/>
+    <filter root="/content/dam/techrevelaemsite" mode="merge">
+        <exclude pattern="/content/dam/techrevelaemsite(/.*)?"/>
+        <include pattern="/content/dam/techrevelaemsite/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/techrevelaemsite/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/techrevelaemsite" mode="merge"/>
+</workspaceFilter>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/techrevelaemsite/clientlibs"/>
+    <filter root="/apps/techrevelaemsite/components"/>
+    <filter root="/apps/techrevelaemsite/i18n"/>
+</workspaceFilter>
