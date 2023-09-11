@@ -16,7 +16,7 @@
     <cqProjectLucene/>
     <cqReportsLucene/>
     <cqTagLucene-3/>
-    <damAssetLucene-9
+    <damAssetLucene-9-custom-1
         jcr:primaryType="oak:QueryIndexDefinition"
         async="[async,nrt]"
         compatVersion="{Long}2"
@@ -363,7 +363,7 @@
         <tika jcr:primaryType="nt:unstructured">
             <config.xml/>
         </tika>
-    </damAssetLucene-9>
+    </damAssetLucene-9-custom-1>
     <damAssetStateIndex-5/>
     <damCollectionLucene-4/>
     <designFiles-1/>
