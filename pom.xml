@@ -81,7 +81,7 @@
             
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
             
-    <aem.sdk.api>2023.8.13323.20230831T134651Z-230800</aem.sdk.api>
+    <aem.sdk.api>2023.8.13173.20230818T110953Z-230702</aem.sdk.api>
             
     <aemanalyser.version>1.4.10</aemanalyser.version>
             
@@ -1186,7 +1186,14 @@ Bundle-DocURL:
         <scope>test</scope>
                     
       </dependency>
-              
+      <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
+      <dependency>
+        <groupId>org.jetbrains</groupId>
+        <artifactId>annotations</artifactId>
+        <version>24.0.1</version>
+      </dependency>
+
+
     </dependencies>
         
   </dependencyManagement>

@@ -1,0 +1,11 @@
+<div data-sly-use.feature="com.techrevel.core.models.Feature"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.imageTemplate="image.html"
+     data-sly-test.hasContent="${feature.imageResource || feature.title}"
+     class="cmp-feature${!wcmmode.disabled && feature.imageResource ? ' cq-dd-image' : ''}">
+     <h2 class="cmp-feature__title" data-sly-test.title="${feature.title}">
+          <a class="cmp-feature__title-link">${title}</a>
+     </h2>
+     <sly data-sly-call="${imageTemplate.image @ feature=feature}"></sly>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-feature'}"></sly>
