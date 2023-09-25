@@ -2,11 +2,9 @@ package com.techrevel.core.models.impl;
 
 import com.adobe.cq.wcm.core.components.util.AbstractComponentImpl;
 import com.day.cq.commons.DownloadResource;
-import com.day.cq.wcm.api.components.Component;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,15 +22,11 @@ public abstract class AbstractImageDelegatingModel extends AbstractComponentImpl
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractImageDelegatingModel.class);
 
-    @ScriptVariable
-    private Component component;
-
     private Resource toBeWrappedResource;
     private Resource imageResource;
 
-    protected void setImageResource(@NotNull Component component, @NotNull Resource toBeWrappedResource) {
+    protected void setImageResource( @NotNull Resource toBeWrappedResource) {
         this.toBeWrappedResource = toBeWrappedResource;
-        this.component = component;
     }
 
     @JsonIgnore
@@ -66,7 +60,7 @@ public abstract class AbstractImageDelegatingModel extends AbstractComponentImpl
 
     protected void initImage() {
         if (this.hasImage()) {
-            this.setImageResource(component, request.getResource());
+            this.setImageResource(request.getResource());
         }
     }
 }
