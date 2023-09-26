@@ -3,7 +3,6 @@ package com.techrevel.core.internal.resources;
 import com.adobe.cq.export.json.ExporterConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceWrapper;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
@@ -19,6 +18,7 @@ public class ImageResourceWrapper extends ResourceWrapper {
     private String resourceType;
 
     public ImageResourceWrapper(@NotNull Resource resource, @NotNull String resourceType) {
+
         super(resource);
         if (StringUtils.isEmpty(resourceType)) {
             throw new IllegalArgumentException("The " + ImageResourceWrapper.class.getName() + " needs to override the resource type of " +
@@ -26,7 +26,6 @@ public class ImageResourceWrapper extends ResourceWrapper {
         }
         this.resourceType = resourceType;
         valueMap = new ValueMapDecorator(new HashMap<>(resource.getValueMap()));
-        valueMap.put(ResourceResolver.PROPERTY_RESOURCE_TYPE, resourceType);
     }
 
     @Override
