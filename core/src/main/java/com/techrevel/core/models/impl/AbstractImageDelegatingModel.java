@@ -3,6 +3,7 @@ package com.techrevel.core.models.impl;
 import com.adobe.cq.wcm.core.components.util.AbstractComponentImpl;
 import com.day.cq.commons.DownloadResource;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.techrevel.core.internal.resources.ImageResourceWrapper;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.jetbrains.annotations.NotNull;

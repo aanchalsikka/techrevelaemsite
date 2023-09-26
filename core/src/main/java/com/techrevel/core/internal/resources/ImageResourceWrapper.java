@@ -1,4 +1,4 @@
-package com.techrevel.core.models.impl;
+package com.techrevel.core.internal.resources;
 
 import com.adobe.cq.export.json.ExporterConstants;
 import org.apache.commons.lang3.StringUtils;
