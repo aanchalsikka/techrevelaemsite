@@ -1,8 +1,6 @@
 package com.techrevel.core.models.impl;
 
-import java.util.HashMap;
-import java.util.List;
-
+import com.adobe.cq.export.json.ExporterConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -12,7 +10,7 @@ import org.apache.sling.api.wrappers.ValueMapDecorator;
 import org.apache.sling.models.annotations.Exporter;
 import org.jetbrains.annotations.NotNull;
 
-import com.adobe.cq.export.json.ExporterConstants;
+import java.util.HashMap;
 
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME , extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 public class ImageResourceWrapper extends ResourceWrapper {
@@ -29,13 +27,6 @@ public class ImageResourceWrapper extends ResourceWrapper {
         this.resourceType = resourceType;
         valueMap = new ValueMapDecorator(new HashMap<>(resource.getValueMap()));
         valueMap.put(ResourceResolver.PROPERTY_RESOURCE_TYPE, resourceType);
-    }
-
-    public ImageResourceWrapper(@NotNull Resource resource, @NotNull String resourceType, List<String> hiddenProperties) {
-        this(resource, resourceType);
-        for (String property : hiddenProperties) {
-            valueMap.remove(property);
-        }
     }
 
     @Override

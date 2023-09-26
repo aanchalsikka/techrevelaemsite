@@ -45,12 +45,12 @@ public abstract class AbstractImageDelegatingModel extends AbstractComponentImpl
 
 
     /**
-     * Check if the teaser has an image.
+     * Check if the component has an image.
      *
-     * The teaser has an image if the `{@value DownloadResource#PN_REFERENCE}` property is set and the value
+     * The component has an image if the `{@value DownloadResource#PN_REFERENCE}` property is set and the value
      * resolves to a resource; or if the `{@value DownloadResource#NN_FILE} child resource exists.
      *
-     * @return True if the teaser has an image, false if it does not.
+     * @return True if the component has an image, false if it does not.
      */
     protected boolean hasImage() {
         return Optional.ofNullable(this.resource.getValueMap().get(DownloadResource.PN_REFERENCE, String.class))
