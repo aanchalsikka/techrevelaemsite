@@ -95,6 +95,13 @@
                             <type>zip</type>
                             <target>/apps/techrevelaemsite-vendor-packages/content/install</target>
                         </embedded>
+                        <!-- Deploys third-party bundle to AEM -->
+                        <embedded>
+                            <groupId>com.auth0</groupId>
+                            <artifactId>java-jwt</artifactId>
+                            <type>jar</type>
+                            <target>/apps/techrevelaemsite-vendor-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -229,6 +236,10 @@
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples.ui.content</artifactId>
             <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
         </dependency>
     </dependencies>
 </project>
