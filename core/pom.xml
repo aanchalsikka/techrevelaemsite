@@ -145,5 +145,10 @@ Import-Package: javax.annotation;version=0.0.0,*
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
         </dependency>
+        <!-- Dependency section of core/pom.xml-->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+        </dependency>
     </dependencies>
 </project>
