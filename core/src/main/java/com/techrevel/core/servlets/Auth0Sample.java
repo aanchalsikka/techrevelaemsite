@@ -1,7 +1,6 @@
 package com.techrevel.core.servlets;
 
-import com.auth0.jwk.JwkProvider;
-import com.auth0.jwk.UrlJwkProvider;
+import com.auth0.jwt.exceptions.AlgorithmMismatchException;
 import com.drew.lang.annotations.NotNull;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -19,9 +18,8 @@ import javax.servlet.Servlet;
 
 })
 public class Auth0Sample extends SlingSafeMethodsServlet {
-    private static final String AUTH0_DOMAIN = "https://abc-78zahjrcz4ydsczg.us.auth0.com/";
 
-    protected void doGet(final @NotNull SlingHttpServletRequest request, final @NotNull SlingHttpServletResponse response) {
-        JwkProvider provider = new UrlJwkProvider(AUTH0_DOMAIN);
+    protected void doGet(final @NotNull SlingHttpServletRequest request, final @NotNull SlingHttpServletResponse response) throws AlgorithmMismatchException {
+        throw new AlgorithmMismatchException("Just a sample to enforce dependency on JWT bundle");
     }
 }

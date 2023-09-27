@@ -890,7 +890,14 @@ Bundle-DocURL:
         </pluginManagement>
                     
       </build>
-              
+      <repositories>
+        <repository>
+          <snapshots/>
+          <id>techrevelartifactory-snapshots</id>
+          <name>a0uzrmskcncpo-artifactory-primary-0-snapshots</name>
+          <url>https://techrevel.jfrog.io/artifactory/libs-snapshot</url>
+        </repository>
+      </repositories>
     </profile>
             
     <profile>
@@ -968,35 +975,7 @@ Bundle-DocURL:
         </pluginManagement>
                     
       </build>
-              
-    </profile>
-
-    <profile>
-      <id>adobe-public</id>
-
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-
-      <properties>
-        <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
-        <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
-        <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
-      </properties>
-
       <repositories>
-        <repository>
-          <id>adobe-public-releases</id>
-          <name>Adobe Public Repository</name>
-          <url>https://repo.adobe.com/nexus/content/groups/public</url>
-          <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
         <repository>
           <snapshots/>
           <id>techrevelartifactory-snapshots</id>
@@ -1004,21 +983,7 @@ Bundle-DocURL:
           <url>https://techrevel.jfrog.io/artifactory/libs-snapshot</url>
         </repository>
       </repositories>
-
-      <pluginRepositories>
-        <pluginRepository>
-          <id>adobe-public-releases</id>
-          <name>Adobe Public Repository</name>
-          <url>https://repo.adobe.com/nexus/content/groups/public</url>
-          <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-      </pluginRepositories>
+              
     </profile>
 
     <profile>
