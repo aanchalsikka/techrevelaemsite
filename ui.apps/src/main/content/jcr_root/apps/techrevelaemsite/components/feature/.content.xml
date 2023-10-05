@@ -3,4 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Feature"
     componentGroup="Techrevel AEM Site - Content"
-    imageDelegate="wknd/components/image"/>
+    imageDelegate="wknd/components/image"
+    sling:resourceSuperType="wknd/components/image"/>
