@@ -30,9 +30,9 @@ import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(AemContextExtension.class)
-class SimpleServletTest {
+class SimpleGetServletTest {
 
-    private SimpleServlet fixture = new SimpleServlet();
+    private SimpleGetServlet fixture = new SimpleGetServlet();
 
     @Test
     void doGet(AemContext context) throws ServletException, IOException {
