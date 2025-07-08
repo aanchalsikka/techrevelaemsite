@@ -95,6 +95,12 @@
                             <type>zip</type>
                             <target>/apps/techrevelaemsite-vendor-packages/content/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>org.apache.sling</groupId>
+                            <artifactId>org.apache.sling.servlet-helpers</artifactId>
+                            <type>jar</type>
+                            <target>/apps/techrevelaemsite-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -229,6 +235,10 @@
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples.ui.content</artifactId>
             <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.servlet-helpers</artifactId>
         </dependency>
     </dependencies>
 </project>
