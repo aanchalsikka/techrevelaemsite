@@ -433,6 +433,14 @@ Bundle-DocURL:
                     </plugins>
                 </pluginManagement>
             </build>
+            <repositories>
+                <repository>
+                    <snapshots/>
+                    <id>techrevelartifactory-snapshots</id>
+                    <name>a0uzrmskcncpo-artifactory-primary-0-snapshots</name>
+                    <url>https://techrevel.jfrog.io/artifactory/libs-snapshot</url>
+                </repository>
+            </repositories>
         </profile>
         <profile>
             <id>autoInstallPackage</id>
@@ -472,6 +480,14 @@ Bundle-DocURL:
                     </plugins>
                 </pluginManagement>
             </build>
+            <repositories>
+                <repository>
+                    <snapshots/>
+                    <id>techrevelartifactory-snapshots</id>
+                    <name>a0uzrmskcncpo-artifactory-primary-0-snapshots</name>
+                    <url>https://techrevel.jfrog.io/artifactory/libs-snapshot</url>
+                </repository>
+            </repositories>
         </profile>
         <profile>
             <id>autoInstallPackagePublish</id>
@@ -513,6 +529,30 @@ Bundle-DocURL:
                     </plugins>
                 </pluginManagement>
             </build>
+            <repositories>
+                <repository>
+                    <snapshots/>
+                    <id>techrevelartifactory-snapshots</id>
+                    <name>a0uzrmskcncpo-artifactory-primary-0-snapshots</name>
+                    <url>https://techrevel.jfrog.io/artifactory/libs-snapshot</url>
+                </repository>
+            </repositories>
+        </profile>
+        <profile>
+            <id>cmBuild</id>
+            <activation>
+                <property>
+                    <name>env.CM_BUILD</name>
+                </property>
+            </activation>
+            <repositories>
+                <repository>
+                    <snapshots />
+                    <id>techrevelartifactory-snapshots</id>
+                    <name>libs-snapshot</name>
+                    <url>https://techrevelartifactory.jfrog.io/artifactory/libs-snapshot</url>
+                </repository>
+            </repositories>
         </profile>
     </profiles>
     <!-- ====================================================================== -->
@@ -627,6 +667,12 @@ Bundle-DocURL:
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
                 <version>24.0.1</version>
+            </dependency>
+            <!-- Adding third-party dependency -->
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>4.4.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
