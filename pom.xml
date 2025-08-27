@@ -628,6 +628,20 @@ Bundle-DocURL:
                 <artifactId>annotations</artifactId>
                 <version>24.0.1</version>
             </dependency>
+            <!-- Dependency section of pom.xml-->
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>4.4.1-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+    <!-- This repository exists inside the source, and will contain 3rd party dependencies not available through Maven Central -->
+    <repositories>
+        <repository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file://${project.basedir}/../repository</url>
+        </repository>
+    </repositories>
 </project>

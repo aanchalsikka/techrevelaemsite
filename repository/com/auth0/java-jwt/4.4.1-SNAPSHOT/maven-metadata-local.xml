@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.auth0</groupId>
+  <artifactId>java-jwt</artifactId>
+  <versioning>
+    <lastUpdated>20230927084033</lastUpdated>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>4.4.1-SNAPSHOT</value>
+        <updated>20230927084033</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>4.4.1-SNAPSHOT</value>
+        <updated>20230927084033</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>4.4.1-SNAPSHOT</version>
+</metadata>
