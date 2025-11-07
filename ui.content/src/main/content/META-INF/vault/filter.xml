@@ -8,4 +8,5 @@
     </filter>
     <filter root="/content/dam/techrevelaemsite/asset.jpg" mode="merge"/>
     <filter root="/content/experience-fragments/techrevelaemsite" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/launcher/config" />
 </workspaceFilter>
